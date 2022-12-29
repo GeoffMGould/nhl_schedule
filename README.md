@@ -27,3 +27,5 @@ In the nhl_plots_and_stats program, I use the schedule I generated to investigat
 
 I learned a variety of statistical techniques and had formal training in statistics while earnning a PhD in Biology. During that time, I ran complex statistical models and produced figures which were published in my first-author peer-reviewed papers. I draw on some of that experience in comparing travel between teams, divisions, and conferences. While the primary purpose of this was to demonstrate my fluency with the idioms and syntax of matplotlib, the results raise some interesting questions. I also export the schedule as a CSV file in case further exploration or representation is desired. 
 
+Taken as a whole, these programs have a little bit of everything. They demonstrate my fluency with Python's core data structures along with the universal constructs of looping, conditionals, iteration, and repetition and also feature complex and deeply nested functions and list comprehensions. There's also visualization and statistical analysis
+
