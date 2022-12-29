@@ -1,0 +1,33 @@
+﻿Team,Team_Name,Team_Abbr,City,State,Div,Conf,Block,Crossblock_Ref,Last_Year
+Boston,Bruins,BOS,Boston,MA,ATL,E,A,0,5
+Buffalo,Sabres,BUF,Buffalo,NY,ATL,E,A,0,6
+Detroit,Red Wings,DET,Detroit,MI,ATL,E,B,0,6
+Florida,Panthers,FLA,Sunrise,FL,ATL,E,B,0,4
+Montreal,Canadiens,MON,Montreal,QC,ATL,E,C,0,6
+Ottawa,Senators,OTT,Ottawa,ON,ATL,E,C,0,6
+Tampa Bay,Lightning,TBL,Tampa,FL,ATL,E,D,0,2
+Toronto,Maple Leafs,TOR,Toronto,ON,ATL,E,D,0,5
+Arizona,Coyotes,ARI,Tempe,AZ,CEN,W,A,0,6
+Chicago,Blackhawks,CHI,Chicago,IL,CEN,W,A,0,6
+Colorado,Avalanche,COL,Denver,CO,CEN,W,B,0,1
+Dallas,Stars,DAL,Dallas,TX,CEN,W,B,0,5
+Minnesota,Wild,MIN,St. Paul,MN,CEN,W,C,0,5
+Nashville,Predators,NSH,Nashville,TN,CEN,W,C,0,5
+St. Louis,Blues,STL,St. Louis,MO,CEN,W,D,0,4
+Winnipeg,Jets,WIN,Winnipeg,MB,CEN,W,D,0,6
+Carolina,Hurricanes,CAR,Raleigh,NC,MET,E,A,0,4
+Columbus,Blue Jackets,CBJ,Columbus,OH,MET,E,A,0,6
+New Jersey,Devils,NJD,Newark,NJ,MET,E,B,0,6
+New York,Islanders,NYI,Elmont,NY,MET,E,B,0,6
+New York,Rangers,NYR,New York,NY,MET,E,C,0,3
+Philadelphia,Flyers,PHI,Philadelphia,PA,MET,E,C,0,6
+Pittsburgh,Penguins,PIT,Pittsburgh,PA,MET,E,D,0,5
+Washington,Capitals,WAS,Washington,DC,MET,E,D,0,5
+Anaheim,Ducks,ANA,Anaheim,CA,PAC,W,A,0,6
+Calgary,Flames,CAL,Calgary,AB,PAC,W,A,0,4
+Edmonton,Oilers,EDM,Edmonton,AB,PAC,W,B,0,3
+Los Angeles,Kings,LAK,Los Angeles,CA,PAC,W,B,0,5
+San Jose,Sharks,SJS,San Jose,CA,PAC,W,C,0,6
+Seattle,Kraken,SEA,Seattle,WA,PAC,W,C,0,6
+Vancouver,Canucks,VAN,Vancouver,BC,PAC,W,D,0,6
+Vegas,Golden Knights,VGK,Las Vegas,NV,PAC,W,D,0,6
