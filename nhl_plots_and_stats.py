@@ -293,35 +293,35 @@ print("Let's look at some plots and stats\n")
 print("At any time, enter 'Q' to quit the program")
 while True:
     inp = input("Would you like to see plots based on distance traveled by all teams? (Y/N)\n")
-    if re.search("(\s)*[Yy](\s)*",inp): # yes, see plots
+    if re.search("^(\s)*[Yy](\s)*$",inp): # yes, see plots
         attempts_counter = 0
         print("Great - which one would you like to see first?\n")
         while True:
             inp_plot_choice = input("""1. Horizontal Bar Plot comparing travel for all teams \n
 2. Simple Error Bar Plot comparing travel by division \n
 3. Box Plot comparing travel by division\n""")
-            if re.search("(\s)*1(\s)*",inp_plot_choice): # this level of indent is first plot choice (1)
+            if re.search("^(\s)*1(\s)*$",inp_plot_choice): # this level of indent is first plot choice (1)
                 attempts_counter = 0
                 make_horizontal_bar_plot()
                 while True:
                     inp_follow_up1_yn = input("Would you like to see the errorbar plot or boxplot? (Y/N)\n") # follow up after original choice 1
-                    if re.search("(\s)*[Yy](\s)*",inp_follow_up1_yn):
+                    if re.search("^(\s)*[Yy](\s)*$",inp_follow_up1_yn):
                         attempts_counter = 0
                         print("Which one?")
                         while True:
                             inp_follow_up1 = input("""1. Error Bar Plot\n2. Boxplot\n""")
-                            if re.search("(\s)*1(\s)*",inp_follow_up1):
+                            if re.search("^(\s)*1(\s)*$",inp_follow_up1):
                                 attempts_counter = 0
                                 make_errorbar_plot()
                                 while True:
                                     inp_follow_up11_yn = input("Would you like to see the box plot too? (Y/N)\n")
-                                    if re.search("(\s)*[Yy](\s)*",inp_follow_up11_yn):  # choice order 1-1
+                                    if re.search("^(\s)*[Yy](\s)*$",inp_follow_up11_yn):  # choice order 1-1
                                         attempts_counter = 0
                                         make_boxplot(); break
-                                    elif re.search("(\s)*[Nn](\s)*",inp_follow_up11_yn):
+                                    elif re.search("^(\s)*[Nn](\s)*$",inp_follow_up11_yn):
                                         attempts_counter = 0
                                         print("OK. On to the stats then"); break
-                                    elif re.search("(\s)*[Qq](\s)*",inp_follow_up11_yn):
+                                    elif re.search("^(\s)*[Qq](\s)*$",inp_follow_up11_yn):
                                         print("Goodbye")
                                         sys.exit(0)
                                     else:
@@ -331,18 +331,18 @@ while True:
                                         else:
                                             sys.exit(0)
                                 break
-                            elif re.search("(\s)*2(\s)*",inp_follow_up1): # choice order 1-2
+                            elif re.search("^(\s)*2(\s)*$",inp_follow_up1): # choice order 1-2
                                 attempts_counter = 0
                                 make_boxplot()
                                 while True:
                                     inp_follow_up12_yn = input("Would you like to see the errorbar plot too? (Y/N)\n")
-                                    if re.search("(\s)*[Yy](\s)*",inp_follow_up12_yn):
+                                    if re.search("^(\s)*[Yy](\s)*$",inp_follow_up12_yn):
                                         attempts_counter = 0
                                         make_errorbar_plot(); break
-                                    elif re.search("(\s)*[Nn](\s)*",inp_follow_up12_yn):
+                                    elif re.search("^(\s)*[Nn](\s)*$",inp_follow_up12_yn):
                                         attempts_counter = 0
                                         print("OK. On to the stats then"); break
-                                    elif re.search("(\s)*[Qq](\s)*",inp_follow_up12_yn):
+                                    elif re.search("^(\s)*[Qq](\s)*$",inp_follow_up12_yn):
                                         print("Goodbye")
                                         sys.exit(0)
                                     else:
@@ -352,7 +352,7 @@ while True:
                                         else:
                                             sys.exit(0)
                                 break
-                            elif re.search("(\s)*[Q](\s)*",inp_follow_up1):
+                            elif re.search("^(\s)*[Q](\s)*$",inp_follow_up1):
                                 print("Goodbye")
                                 sys.exit(0)
                             else:
@@ -362,11 +362,11 @@ while True:
                                 else:
                                     sys.exit(0)
                         break
-                    elif re.search("(\s)*[Nn](\s)*",inp_follow_up1_yn):
+                    elif re.search("^(\s)*[Nn](\s)*$",inp_follow_up1_yn):
                         attempts_counter = 0
                         print("OK. On to the stats then")
                         break
-                    elif re.search("(\s)*[Qq](\s)*",inp_follow_up1_yn):
+                    elif re.search("^(\s)*[Qq](\s)*$",inp_follow_up1_yn):
                         attempts_counter = 0
                         print("Goodbye")
                         sys.exit(0)
@@ -378,28 +378,28 @@ while True:
                             sys.exit(0)
                 break
 
-            elif re.search("(\s)*2(\s)*",inp_plot_choice): # this level of indent is first plot choice (2)
+            elif re.search("^(\s)*2(\s)*$",inp_plot_choice): # this level of indent is first plot choice (2)
                 attempts_counter = 0
                 make_errorbar_plot()
                 while True:
                     inp_follow_up2_yn = input("Would you like to see the horizontal bar plot or box plot? (Y/N)\n") # follow up after original choice 2
-                    if re.search("(\s)*[Yy](\s)*",inp_follow_up2_yn):
+                    if re.search("^(\s)*[Yy](\s)*$",inp_follow_up2_yn):
                         attempts_counter = 0
                         print("Which one?")
                         while True:
                             inp_follow_up2 = input("""1. Horizontal Bar Plot\n2. Boxplot\n""")
-                            if re.search("(\s)*1(\s)*",inp_follow_up2): # choice order 2-1
+                            if re.search("^(\s)*1(\s)*$",inp_follow_up2): # choice order 2-1
                                 attempts_counter = 0
                                 make_horizontal_bar_plot()
                                 while True:
                                     inp_follow_up21_yn = input("Would you like to see the box plot too? (Y/N)\n")
-                                    if re.search("(\s)*[Yy](\s)*",inp_follow_up21_yn):
+                                    if re.search("^(\s)*[Yy](\s)*$",inp_follow_up21_yn):
                                         attempts_counter = 0
                                         make_boxplot(); break
-                                    elif re.search("(\s)*[Nn](\s)*",inp_follow_up21_yn):
+                                    elif re.search("^(\s)*[Nn](\s)*$",inp_follow_up21_yn):
                                         attempts_counter = 0
                                         print("OK. On to the stats then"); break
-                                    elif re.search("(\s)*[Qq](\s)*",inp_follow_up21_yn):
+                                    elif re.search("^(\s)*[Qq](\s)*$",inp_follow_up21_yn):
                                         print("Goodbye")
                                         sys.exit(0)
                                     else:
@@ -409,18 +409,18 @@ while True:
                                         else:
                                             sys.exit(0)
                                 break
-                            elif re.search("(\s)*2(\s)*",inp_follow_up2): # choice order 2-2
+                            elif re.search("^(\s)*2(\s)*$",inp_follow_up2): # choice order 2-2
                                 attempts_counter = 0
                                 make_boxplot()
                                 while True:
                                     inp_follow_up12_yn = input("Would you like to see the errorbar plot too? (Y/N)\n")
-                                    if re.search("(\s)*[Yy](\s)*",inp_follow_up22_yn):
+                                    if re.search("^(\s)*[Yy](\s)*$",inp_follow_up22_yn):
                                         attempts_counter = 0
                                         make_errorbar_plot(); break
-                                    elif re.search("(\s)*[Nn](\s)*",inp_follow_up22_yn):
+                                    elif re.search("^(\s)*[Nn](\s)*$",inp_follow_up22_yn):
                                         attempts_counter = 0
                                         print("OK. On to the stats then"); break
-                                    elif re.search("(\s)*[Qq](\s)*",inp_follow_up22_yn):
+                                    elif re.search("^(\s)*[Qq](\s)*$",inp_follow_up22_yn):
                                         attempts_counter = 0
                                         print("Goodbye")
                                         sys.exit(0)
@@ -431,7 +431,7 @@ while True:
                                         else:
                                             sys.exit(0)
                                 break
-                            elif re.search("(\s)*[Q](\s)*",inp_follow_up2):
+                            elif re.search("^(\s)*[Q](\s)*$",inp_follow_up2):
                                 attempts_counter = 0
                                 print("Goodbye")
                                 sys.exit(0)
@@ -442,11 +442,11 @@ while True:
                                 else:
                                     sys.exit(0)
                         break
-                    elif re.search("(\s)*[Nn](\s)*",inp_follow_up2_yn):
+                    elif re.search("^(\s)*[Nn](\s)*$",inp_follow_up2_yn):
                         attempts_counter = 0
                         print("OK. On to the stats then")
                         break
-                    elif re.search("(\s)*[Qq](\s)*",inp_follow_up2_yn):
+                    elif re.search("^(\s)*[Qq](\s)*$",inp_follow_up2_yn):
                         print("Goodbye")
                         sys.exit(0)
                     else:
@@ -457,28 +457,28 @@ while True:
                             sys.exit(0)
                 break
 
-            elif re.search("(\s)*3(\s)*",inp_plot_choice): # this level of indent is first plot choice (3)
+            elif re.search("^(\s)*3(\s)*$",inp_plot_choice): # this level of indent is first plot choice (3)
                 attempts_counter = 0
                 make_boxplot()
                 while True:
                     inp_follow_up3_yn = input("Would you like to see the horizontal bar plot or box plot? (Y/N)\n") # follow up after original choice 3
-                    if re.search("(\s)*[Yy](\s)*",inp_follow_up3_yn):
+                    if re.search("^(\s)*[Yy](\s)*$",inp_follow_up3_yn):
                         attempts_counter = 0
                         print("Which one?")
                         while True:
                             inp_follow_up3 = input("""1. Horizontal Bar Plot\n2. Error Bar Plot\n""")
-                            if re.search("(\s)*1(\s)*",inp_follow_up3): # choice order 3-1
+                            if re.search("^(\s)*1(\s)*$",inp_follow_up3): # choice order 3-1
                                 attempts_counter = 0
                                 make_horizontal_bar_plot()
                                 while True:
                                     inp_follow_up31_yn = input("Would you like to see the error bar plot too? (Y/N)\n")
-                                    if re.search("(\s)*[Yy](\s)*",inp_follow_up31_yn):
+                                    if re.search("^(\s)*[Yy](\s)*$",inp_follow_up31_yn):
                                         attempts_counter = 0
                                         make_errorbar_plot(); break
-                                    elif re.search("(\s)*[Nn](\s)*",inp_follow_up31_yn):
+                                    elif re.search("^(\s)*[Nn](\s)*$",inp_follow_up31_yn):
                                         attempts_counter = 0
                                         print("OK. On to the stats then"); break
-                                    elif re.search("(\s)*[Qq](\s)*",inp_follow_up31_yn):
+                                    elif re.search("^(\s)*[Qq](\s)*$",inp_follow_up31_yn):
                                         print("Goodbye")
                                         sys.exit(0)
                                     else:
@@ -488,18 +488,18 @@ while True:
                                         else:
                                             sys.exit(0)
                                 break
-                            elif re.search("(\s)*2(\s)*",inp_follow_up3): # choice order 3-2
+                            elif re.search("^(\s)*2(\s)*$",inp_follow_up3): # choice order 3-2
                                 attempts_counter = 0
                                 make_errorbar_plot()
                                 while True:
                                     inp_follow_up32_yn = input("Would you like to see the horizontal bar plot too? (Y/N)\n")
-                                    if re.search("(\s)*[Yy](\s)*",inp_follow_up32_yn):
+                                    if re.search("^(\s)*[Yy](\s)*$",inp_follow_up32_yn):
                                         attempts_counter = 0
                                         make_horizontal_bar_plot(); break
-                                    elif re.search("(\s)*[Nn](\s)*",inp_follow_up32_yn):
+                                    elif re.search("^(\s)*[Nn](\s)*$",inp_follow_up32_yn):
                                         attempts_counter = 0
                                         print("OK. On to the stats then"); break
-                                    elif re.search("(\s)*[Qq](\s)*",inp_follow_up32_yn):
+                                    elif re.search("^(\s)*[Qq](\s)*$",inp_follow_up32_yn):
                                         print("Goodbye")
                                         sys.exit(0)
                                     else:
@@ -509,7 +509,7 @@ while True:
                                         else:
                                             sys.exit(0)
                                 break
-                            elif re.search("(\s)*[Q](\s)*",inp_follow_up3):
+                            elif re.search("^(\s)*[Q](\s)*$",inp_follow_up3):
                                 print("Goodbye")
                                 sys.exit(0)
                             else:
@@ -519,11 +519,11 @@ while True:
                                 else:
                                     sys.exit(0)
                         break
-                    elif re.search("(\s)*[Nn](\s)*",inp_follow_up3_yn):
+                    elif re.search("^(\s)*[Nn](\s)*$",inp_follow_up3_yn):
                         attempts_counter = 0
                         print("OK. On to the stats then")
                         break
-                    elif re.search("(\s)*[Qq](\s)*",inp_follow_up3_yn):
+                    elif re.search("^(\s)*[Qq](\s)*$",inp_follow_up3_yn):
                         print("Goodbye")
                         sys.exit(0)
                     else:
@@ -533,7 +533,7 @@ while True:
                         else:
                             sys.exit(0)
                 break
-            elif re.search("(\s)*[Qq](\s)*",inp_plot_choice): # first plot choice
+            elif re.search("^(\s)*[Qq](\s)*$",inp_plot_choice): # first plot choice
                 print("Goodbye")
                 sys.exit(0)
             else:
@@ -544,12 +544,12 @@ while True:
                     sys.exit(0)
         break
 
-    elif re.search("(\s)*[Nn](\s)*",inp): # No, don't see plots
+    elif re.search("^(\s)*[Nn](\s)*$",inp): # No, don't see plots
         attempts_counter = 0
         print("OK. On to the stats then")
         break
 
-    elif re.search("(\s)*[Qq](\s)*",inp):
+    elif re.search("^(\s)*[Qq](\s)*$",inp):
         print("Goodbye")
         sys.exit(0)
 
@@ -563,30 +563,30 @@ while True:
 # Prompt for statistical analysis
 while True:
     inp_see_stats = input("Would you like to see some statistical comparisons of travel? (Y/N)\n")
-    if re.search("(\s)*[Yy](\s)*",inp_see_stats):
+    if re.search("^(\s)*[Yy](\s)*$",inp_see_stats):
         attempts_counter = 0
         print("Great - do you want to see a comparison by conference or divsion?")
         while True:
             inp_stats_choice = input("1. By conference\n2. By division\n")
-            if re.search("(\s)*1(\s)*",inp_stats_choice):
+            if re.search("^(\s)*1(\s)*$",inp_stats_choice):
                 attempts_counter = 0
                 conference_comparison()
                 while True:
                     stats_follow_up1 = input("Would you like to see the comparison by division too? (Y/N)\n")
-                    if re.search("(\s)*[Yy](\s)*",stats_follow_up1):
+                    if re.search("^(\s)*[Yy](\s)*$",stats_follow_up1):
                         attempts_counter = 0
                         division_comparison()
                         while True:
                             qq_prompt = input("Would you like to see the QQ plots for the divisions? (Y/N)\n")
-                            if re.search("(\s)*[Yy](\s)*",qq_prompt):
+                            if re.search("^(\s)*[Yy](\s)*$",qq_prompt):
                                 make_qq_plot()
                                 print("Saving to working directory as 'nhl_qqplots.py'")
                                 print("That's all for now! Goodbye!")
                                 sys.exit(0)
-                            elif re.search("(\s)*[Nn](\s)*",qq_prompt):
+                            elif re.search("^(\s)*[Nn](\s)*$",qq_prompt):
                                 print("That's all for now! Goodbye!")
                                 sys.exit(0)
-                            elif re.search("(\s)*[Qq](\s)*",qq_prompt):
+                            elif re.search("^(\s)*[Qq](\s)*$",qq_prompt):
                                 print("That's all for now! Goodbye!")
                                 sys.exit(0)
                             else:
@@ -595,10 +595,10 @@ while True:
                                     continue
                                 else:
                                     sys.exit(0)
-                    elif re.search("(\s)*[Nn](\s)*",stats_follow_up1):
+                    elif re.search("^(\s)*[Nn](\s)*$",stats_follow_up1):
                         print("That's all for now! Goodbye!")
                         sys.exit(0)
-                    elif re.search("(\s)*[Qq](\s)*",stats_follow_up1):
+                    elif re.search("^(\s)*[Qq](\s)*$",stats_follow_up1):
                         print("Ok then. Goodbye!")
                         sys.exit(0)
                     else:
@@ -608,20 +608,20 @@ while True:
                         else:
                             sys.exit(0)
                 break
-            elif re.search("(\s)*2(\s)*",inp_stats_choice):
+            elif re.search("^(\s)*2(\s)*$",inp_stats_choice):
                 attempts_counter = 0
                 division_comparison()
                 while True:
                     qq_prompt = input("Would you like to see the QQ plots for the divisions? (Y/N)\n")
-                    if re.search("(\s)*[Yy](\s)*",qq_prompt):
+                    if re.search("^(\s)*[Yy](\s)*$",qq_prompt):
                         attempts_counter = 0
                         make_qq_plot()
                         print("Saving to working directory as 'nhl_qqplots.py'")
                         break
-                    elif re.search("(\s)*[Nn](\s)*",qq_prompt):
+                    elif re.search("^(\s)*[Nn](\s)*$",qq_prompt):
                         attempts_counter = 0
                         break
-                    elif re.search("(\s)*[Qq](\s)*",qq_prompt):
+                    elif re.search("^(\s)*[Qq](\s)*$",qq_prompt):
                         print("Ok then. Goodbye!")
                         sys.exit(0)
                     else:
@@ -632,14 +632,14 @@ while True:
                             sys.exit(0)
                 while True:
                     stats_follow_up2 = input("Would you like to see the comparison by conference too? (Y/N)\n")
-                    if re.search("(\s)*[Yy](\s)*",stats_follow_up2):
+                    if re.search("^(\s)*[Yy](\s)*$",stats_follow_up2):
                         conference_comparison()
                         print("That's all for now! Goodbye!")
                         sys.exit(0)
-                    elif re.search("(\s)*[Nn](\s)*",stats_follow_up2):
+                    elif re.search("^(\s)*[Nn](\s)*$",stats_follow_up2):
                         print("That's all for now! Goodbye!")
                         sys.exit(0)
-                    elif re.search("(\s)*[Qq](\s)*",stats_follow_up2):
+                    elif re.search("^(\s)*[Qq](\s)*$",stats_follow_up2):
                         print("Ok then. Goodbye!")
                         sys.exit(0)
                     else:
@@ -650,7 +650,7 @@ while True:
                             sys.exit(0)
                 break
 
-            elif re.search("(\s)*[Qq](\s)*",inp_stats_choice):
+            elif re.search("^(\s)*[Qq](\s)*$",inp_stats_choice):
                 print("As you wish. Goodbye!")
                 sys.exit(0)
 
@@ -661,11 +661,11 @@ while True:
                 else:
                     sys.exit(0)
         break
-    elif re.search("(\s)*[Nn](\s)*",inp_see_stats):
+    elif re.search("^(\s)*[Nn](\s)*$",inp_see_stats):
         print("OK, maybe next time then.\nGoodbye.")
         sys.exit(0)
 
-    elif re.search("(\s)*[NnQq](\s)*",inp_see_stats):
+    elif re.search("^(\s)*[NnQq](\s)*$",inp_see_stats):
         print("Goodbye")
         sys.exit(0)
 
